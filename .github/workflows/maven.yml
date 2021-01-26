@@ -39,7 +39,7 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --file demo/pom.xml --update-snapshots verify
       - name: Copy target 
-        run: mkdir staging && cp target/*.jar staging
+        run: mkdir staging && cp demo/target/*.jar staging
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
